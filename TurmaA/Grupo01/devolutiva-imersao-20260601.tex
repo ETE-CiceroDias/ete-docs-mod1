@@ -1,6 +1,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %  Devolutiva — Fase 1: Imersão
-%  Disciplina: Design Thinking (DE_233) — ETE Cícero Dias
+%  ETE Cícero Dias · Módulo 1 · Turma A · 2026.1
 %  Profa. Samara Silva  ·  Recife, 1 de junho de 2026
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
@@ -13,6 +13,7 @@
 \settopmatter{printacmref=false}
 \setcopyright{none}
 \acmYear{2026}
+\let\balance\relax
 
 % ── Pacotes ─────────────────────────────────────────────────
 \usepackage[portuguese]{babel}
@@ -24,7 +25,7 @@
 \usepackage[dvipsnames,table]{xcolor}
 \usepackage[inline]{enumitem}
 \usepackage{graphicx}
-\usepackage{adjustbox}
+\usepackage{textcomp}
 
 % ── Cores ───────────────────────────────────────────────────
 \definecolor{cgood}{HTML}{1E6B3A}
@@ -33,21 +34,19 @@
 \definecolor{cmuted}{HTML}{666666}
 \definecolor{crow}{HTML}{F2EFEB}
 
-% ── Colunas customizadas para tabela ────────────────────────
+% ── Colunas customizadas ─────────────────────────────────────
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
-% ── Comando nota destacada ───────────────────────────────────
+% ── Comandos ──────────────────────────────────────────────────
 \newcommand{\notadestaque}[2]{%
   \noindent\textbf{Nota:}\enspace%
   {\large\bfseries\color{cred}#1\,/\,#2\,pts}%
 }
-
-% ── Comando label de status ──────────────────────────────────
 \newcommand{\statusok}[1]{{\small\bfseries\color{cgood}#1}}
 \newcommand{\statuswarn}[1]{{\small\bfseries\color{cwarn}#1}}
 
-% ── Renomeações PT-BR ────────────────────────────────────────
+% ── PT-BR ────────────────────────────────────────────────────
 \AtBeginDocument{%
   \renewcommand{\abstractname}{Resumo}
   \renewcommand{\figurename}{Figura}
@@ -67,30 +66,33 @@
 \newpage
 
 % ── METADADOS ────────────────────────────────────────────────
-\title{Devolutiva de Avaliação: Fase 1 --- Imersão}
+\title{Devolutiva de Avalia\c{c}\~ao --- Grupo 01 - Fome Zero}
 
 \author{Profa.\ Samara Silva}
-\authornote{Grupo avaliado: \textbf{Grupo 01 - Fome Zero} · Período: 22 de maio de 2026 · Avaliado em: 1 de junho de 2026.}
+\authornote{Grupo: \textbf{Grupo 01 - Fome Zero} \textperiodcentered\ Per\'{i}odo: 22 de maio de 2026 \textperiodcentered\ Avaliado em: 1 de junho de 2026.}
 \email{samarasilvia.educa@gmail.com}
 \affiliation{%
-  \institution{ETE Cícero Dias}
-  \department{Design Thinking --- DE\_233}
+  \institution{ETE C\'{i}cero Dias}
+  \department{M\'{o}dulo 1 --- Turma A · 2026.1}
   \city{Recife}
   \state{Pernambuco}
   \country{Brasil}
 }
+
+\begin{abstract}
+Devolutiva de avaliação do grupo \textbf{Grupo 01 - Fome Zero}, referente à Fase~1 --- Imersão, no âmbito das disciplinas do Módulo~1 da ETE Cícero Dias. A nota total obtida foi de \textbf{3,27} pontos.
+\end{abstract}
+
 \maketitle
 
-\section{Avaliação Geral}
+\section{Design Thinking}
 
 \notadestaque{3,27}{10,00}
-
-A Fase~1 foi concluída. A seguir o resumo dos critérios e os comentários por critério.
 
 \subsection{Resumo dos Critérios}
 
 \rowcolors{2}{crow}{white}
-\begin{tabular}{@{} L{2.8cm} C{2.0cm} C{1.1cm} C{1.1cm} @{}}
+\begin{tabular}{@{} L{2.8cm} C{2.2cm} C{1.1cm} C{1.1cm} @{}}
 \toprule
 \textbf{Critério} & \textbf{Status} & \textbf{Nota} & \textbf{Máx.} \\
 \midrule
@@ -99,19 +101,8 @@ Matriz de Alinhamento & \statusok{Completo} & \textbf{0,50} & 0,50 \\
 Matriz CSD & \statuswarn{Completo c/ ressalvas} & \textbf{0,42} & 0,50 \\
 Pesquisa Primária & \statuswarn{Completo c/ ressalvas} & \textbf{0,85} & 1,00 \\
 Relatório de Imersão & \statusok{Completo} & \textbf{1,00} & 1,00 \\
-Persona com Empatia Real & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Mapa de Empatia como Ferramenta & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Coerência Problema → Solução & \statuswarn{Não entregue} & \textbf{0,00} & 0,75 \\
-Jornada do Usuário & \statuswarn{Não entregue} & \textbf{0,00} & 0,25 \\
-Geração de Ideias — Quantidade e Ousadia & \statuswarn{Não entregue} & \textbf{0,00} & 0,75 \\
-Priorização com Critério & \statuswarn{Não entregue} & \textbf{0,00} & 0,75 \\
-Inovação da Solução & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Storytelling — A História do Usuário & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Documentação do Processo & \statuswarn{Não entregue} & \textbf{0,00} & 0,75 \\
-Colaboração e Distribuição do Trabalho & \statuswarn{Não entregue} & \textbf{0,00} & 0,75 \\
-Participação no Pitch & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
 \midrule
-\textbf{Total} & & \textbf{\color{cred}3,27} & \textbf{10,00} \\
+\textbf{Total} & & \textbf{\color{cred}3,27} & \textbf{3,50} \\
 \bottomrule
 \end{tabular}
 
@@ -119,7 +110,9 @@ Participação no Pitch & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
 
 \subsection{Pesquisa Desk}
 
-\noindent\statusok{0,50\,/\,0,50 pts · Completo}
+\noindent\statusok{0,50\,/\,0,50 pts \textperiodcentered\ Completo}
+
+{\small\color{cmuted}\textit{Fez tudo e fez certo. Critério plenamente atendido.}}
 
 \begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
   \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Dados secundários relevantes e atuais sobre o ODS escolhido}}
@@ -140,7 +133,9 @@ Outro ponto fortíssimo do trabalho foi a consolidação das inferências no fin
 
 \subsection{Matriz de Alinhamento}
 
-\noindent\statusok{0,50\,/\,0,50 pts · Completo}
+\noindent\statusok{0,50\,/\,0,50 pts \textperiodcentered\ Completo}
+
+{\small\color{cmuted}\textit{Fez tudo e fez certo. Critério plenamente atendido.}}
 
 \begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
   \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Preenchida com perguntas reais do grupo sobre o problema}}
@@ -152,7 +147,9 @@ Nada a declarar. Está tudo de acordo com o esperado!
 
 \subsection{Matriz CSD}
 
-\noindent\statuswarn{0,42\,/\,0,50 pts · Completo c/ ressalvas}
+\noindent\statuswarn{0,42\,/\,0,50 pts \textperiodcentered\ Completo c/ ressalvas}
+
+{\small\color{cmuted}\textit{Fez tudo, mas algo ficou incorreto ou impreciso. Esforço total, qualidade com falha.}}
 
 \begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
   \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Os três quadrantes preenchidos: Certezas, Suposições, Dúvidas}}
@@ -163,7 +160,9 @@ Nada a declarar. Está tudo de acordo com o esperado!
 
 \subsection{Pesquisa Primária}
 
-\noindent\statuswarn{0,85\,/\,1,00 pts · Completo c/ ressalvas}
+\noindent\statuswarn{0,85\,/\,1,00 pts \textperiodcentered\ Completo c/ ressalvas}
+
+{\small\color{cmuted}\textit{Fez tudo, mas algo ficou incorreto ou impreciso. Esforço total, qualidade com falha.}}
 
 \textit{\textbf{Seção presente no relatório}}
 
@@ -183,7 +182,9 @@ Apesar dessas oportunidades de melhoria no formulário, os dados coletados foram
 
 \subsection{Relatório de Imersão}
 
-\noindent\statusok{1,00\,/\,1,00 pts · Completo}
+\noindent\statusok{1,00\,/\,1,00 pts \textperiodcentered\ Completo}
+
+{\small\color{cmuted}\textit{Fez tudo e fez certo. Critério plenamente atendido.}}
 
 \begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
   \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Estrutura formal: introdução, resumo, metodologia, destaques, referências}}
@@ -203,412 +204,102 @@ Para garantir o rigor metodológico e evitar incoerências na entrega final, a e
 \end{enumerate}
 \textbf{Como corrigir:} > Na seção 2.2 do relatório, vocês devem incluir as verdadeiras \textbf{Perguntas de Pesquisa} (que são os objetivos estratégicos da \textit{equipe}, e não o questionário do público).
 
-\subsection{Persona com Empatia Real}
+\section{Critérios e Níveis de Avaliação}
 
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
+Esta seção apresenta os níveis utilizados e as penalizações por atraso, para transparência na avaliação.
 
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{A persona nasceu dos dados da imersão}}
-  \item[$\square$] {\small\textcolor{cmuted}{Tem dor específica, não genérica}}
-  \item[$\square$] {\small\textcolor{cmuted}{O grupo consegue explicar de onde veio cada característica}}
+\subsection{Níveis de Completude}
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=3pt]
+  \item \textbf{Completo} (100\%): Fez tudo e fez certo. Critério plenamente atendido.
+  \item \textbf{Completo c/ ressalvas} (85\%): Fez tudo, mas algo ficou incorreto ou impreciso. Esforço total, qualidade com falha.
+  \item \textbf{Completo, mas inadequado} (70\%): Preencheu todos os itens, porém boa parte do conteúdo não atende ao propósito da atividade.
+  \item \textbf{Faltou pouco} (65\%): Fez bastante e acertou o que fez. Faltaram partes, mas o que entregou presta.
+  \item \textbf{Faltou pouco c/ erros} (60\%): Fez bastante, mas errou partes relevantes. Metade do caminho com qualidade irregular.
+  \item \textbf{Faltou muito} (40\%): Fez pouco, mas o que fez está correto. Entrega incompleta, execução ok.
+  \item \textbf{Faltou muito e errou} (25\%): Fez pouco e ainda errou. Esforço baixo, qualidade baixa.
+  \item \textbf{Errado} (10\%): Tentou, mas a abordagem foi incorreta por completo. Reconhece a tentativa.
+  \item \textbf{Não fez} (0\%): Critério não entregue.
 \end{itemize}
 
-\subsection{Mapa de Empatia como Ferramenta}
+\subsection{Penalizações por Atraso}
 
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Demonstra que o grupo tentou ver o mundo pela ótica do usuário}}
-  \item[$\square$] {\small\textcolor{cmuted}{Não é só template preenchido — há reflexão real}}
-  \item[$\square$] {\small\textcolor{cmuted}{O conteúdo alimentou a construção da persona}}
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=3pt]
+  \item \textbf{Até 1 dia}: \(-10\%\) da nota máx.
+  \item \textbf{2–3 dias}: \(-20\%\) da nota máx.
+  \item \textbf{Mais de 3 dias}: \(-30\%\) da nota máx.
+  \item \textbf{Não entregou}: zera
 \end{itemize}
 
-\subsection{Coerência Problema → Solução}
+\section{Devolutiva Individual}
 
-\noindent\statuswarn{0,00\,/\,0,75 pts · Não entregue}
+A nota individual é calculada aplicando o fator de contribuição registrado pela professora sobre a nota do grupo em cada fase.
 
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{POV: [Persona] precisa de [necessidade] porque [insight]}}
-  \item[$\square$] {\small\textcolor{cmuted}{O problema é específico e decorre da pesquisa}}
-  \item[$\square$] {\small\textcolor{cmuted}{A solução responde diretamente à dor da persona}}
+\subsection{Fatores de Contribuição}
+
+\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt]
+  \item \textbf{Liderou} (100\%): Coordenou e entregou
+  \item \textbf{Participou} (100\%): Contribuiu ativamente
+  \item \textbf{Participou pouco} (70\%): Envolvimento limitado
+  \item \textbf{Só fez sua parte} (40\%): Mínimo, sem engajamento
+  \item \textbf{Não participou} (0\%): Sem contribuição registrada
 \end{itemize}
 
-\subsection{Jornada do Usuário}
+\subsection{Notas por Integrante}
 
-\noindent\statuswarn{0,00\,/\,0,25 pts · Não entregue}
+\subsubsection*{André da Silva Durães}
 
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{A jornada reflete o que foi descoberto na imersão}}
-  \item[$\square$] {\small\textcolor{cmuted}{Identifica dores e oportunidades reais em cada etapa}}
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=3pt,parsep=0pt]
+  \item \textbf{Design Thinking — Fase 1 — Imersão}: 0,00\,pts — \textit{Não participou (0\%)}
+
+  \item[\textbf{=}] \textbf{Total Individual: 0,00\,pts}
 \end{itemize}
 
-\subsection{Geração de Ideias — Quantidade e Ousadia}
+\subsubsection*{Bruna Maria do Nascimento Costa}
 
-\noindent\statuswarn{0,00\,/\,0,75 pts · Não entregue}
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=3pt,parsep=0pt]
+  \item \textbf{Design Thinking — Fase 1 — Imersão}: 0,00\,pts — \textit{Não participou (0\%)}
 
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O brainstorming mostra que o grupo foi além do óbvio}}
-  \item[$\square$] {\small\textcolor{cmuted}{Tem variedade de ideias, inclusive as ousadas}}
-  \item[$\square$] {\small\textcolor{cmuted}{A ideação divergiu antes de convergir}}
+  \item[\textbf{=}] \textbf{Total Individual: 0,00\,pts}
 \end{itemize}
 
-\subsection{Priorização com Critério}
+\subsubsection*{João Gabriel Cavalcanti}
 
-\noindent\statuswarn{0,00\,/\,0,75 pts · Não entregue}
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=3pt,parsep=0pt]
+  \item \textbf{Design Thinking — Fase 1 — Imersão}: 3,27\,pts — \textit{Participou (100\%)}
 
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{A matriz de impacto foi usada para tomar uma decisão real}}
-  \item[$\square$] {\small\textcolor{cmuted}{Há justificativa para a escolha da solução final}}
-  \item[$\square$] {\small\textcolor{cmuted}{O Canvas Lean demonstra que o grupo pensou sobre viabilidade}}
+  \item[\textbf{=}] \textbf{Total Individual: 3,27\,pts}
 \end{itemize}
 
-\subsection{Inovação da Solução}
+\subsubsection*{Suammyr Cavalcante do Carmo}
 
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=3pt,parsep=0pt]
+  \item \textbf{Design Thinking — Fase 1 — Imersão}: 3,27\,pts — \textit{Liderou (100\%)}
 
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O grupo identifica em qual tipo de inovação se encaixa sua solução}}
-  \item[$\square$] {\small\textcolor{cmuted}{A justificativa é coerente com a solução apresentada}}
-  \item[$\square$] {\small\textcolor{cmuted}{A solução não é a mais óbvia para aquele ODS}}
+  \item[\textbf{=}] \textbf{Total Individual: 3,27\,pts}
 \end{itemize}
 
-\subsection{Storytelling — A História do Usuário}
+\subsubsection*{Maria Zilda Ferreira Pinto}
 
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=3pt,parsep=0pt]
+  \item \textbf{Design Thinking — Fase 1 — Imersão}: 3,27\,pts — \textit{Participou (100\%)}
 
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O pitch conta uma história — não apresenta slides sequencialmente}}
-  \item[$\square$] {\small\textcolor{cmuted}{A narrativa segue: ODS → persona → dor real → solução → impacto}}
-  \item[$\square$] {\small\textcolor{cmuted}{Quem assiste entende o problema antes de ver a solução}}
+  \item[\textbf{=}] \textbf{Total Individual: 3,27\,pts}
 \end{itemize}
 
-\subsection{Documentação do Processo}
+\subsubsection*{Ayran Gabriel Duque Souza Lima}
 
-\noindent\statuswarn{0,00\,/\,0,75 pts · Não entregue}
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=3pt,parsep=0pt]
+  \item \textbf{Design Thinking — Fase 1 — Imersão}: 0,00\,pts — \textit{Não participou (0\%)}
 
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Todas as fases estão documentadas e entregues no Drive}}
-  \item[$\square$] {\small\textcolor{cmuted}{Dá pra rastrear a evolução do projeto}}
-  \item[$\square$] {\small\textcolor{cmuted}{Há coerência entre as fases — cada etapa alimenta a próxima}}
+  \item[\textbf{=}] \textbf{Total Individual: 0,00\,pts}
 \end{itemize}
 
-\subsection{Colaboração e Distribuição do Trabalho}
 
-\noindent\statuswarn{0,00\,/\,0,75 pts · Não entregue}
+\section{Considera\c{c}\~oes Finais}
 
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O Trello mostra que o trabalho foi distribuído}}
-  \item[$\square$] {\small\textcolor{cmuted}{O histórico de commits confirma participação de mais de um membro}}
-  \item[$\square$] {\small\textcolor{cmuted}{Não tem um integrante fazendo tudo}}
-\end{itemize}
-
-\subsection{Participação no Pitch}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Todos os integrantes participam da apresentação}}
-  \item[$\square$] {\small\textcolor{cmuted}{Cada membro demonstra conhecimento sobre o projeto como um todo}}
-\end{itemize}
-
-\section{Avaliação Geral}
-
-\notadestaque{0,00}{10,00}
-
-A Fase~1 foi concluída. A seguir o resumo dos critérios e os comentários por critério.
-
-\subsection{Resumo dos Critérios}
-
-\rowcolors{2}{crow}{white}
-\begin{tabular}{@{} L{2.8cm} C{2.0cm} C{1.1cm} C{1.1cm} @{}}
-\toprule
-\textbf{Critério} & \textbf{Status} & \textbf{Nota} & \textbf{Máx.} \\
-\midrule
-Persona — Qualidade Visual e Estrutura & \statuswarn{Não entregue} & \textbf{0,00} & 0,75 \\
-Jornada do Usuário — Qualidade Visual & \statuswarn{Não entregue} & \textbf{0,00} & 0,75 \\
-Mapa de Empatia — Apresentação Visual & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-POV + Problema + Solução — Clareza & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Documentos de Ideação — Qualidade Visual & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Style Guide — Identidade Visual do Projeto & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Gramática Visual — Princípios de Gestalt & \statuswarn{Não entregue} & \textbf{0,00} & 1,25 \\
-Cor e Tipografia no Protótipo & \statuswarn{Não entregue} & \textbf{0,00} & 1,25 \\
-Affordance, Feedback e Microinterações & \statuswarn{Não entregue} & \textbf{0,00} & 1,25 \\
-Jornada e Fluxo de Tarefas no Protótipo & \statuswarn{Não entregue} & \textbf{0,00} & 1,25 \\
-Progressão: Baixa → Média → Alta Fidelidade & \statuswarn{Não entregue} & \textbf{0,00} & 1,00 \\
-Consistência Visual Geral & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-\midrule
-\textbf{Total} & & \textbf{\color{cred}0,00} & \textbf{10,00} \\
-\bottomrule
-\end{tabular}
-
-\section{Comentários por Critério}
-
-\subsection{Persona — Qualidade Visual e Estrutura}
-
-\noindent\statuswarn{0,00\,/\,0,75 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{A persona é visual e bem diagramada — hierarquia clara e legível}}
-  \item[$\square$] {\small\textcolor{cmuted}{Cor e tipografia coerentes}}
-  \item[$\square$] {\small\textcolor{cmuted}{As informações estão organizadas com clareza}}
-\end{itemize}
-
-\subsection{Jornada do Usuário — Qualidade Visual}
-
-\noindent\statuswarn{0,00\,/\,0,75 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Mapeia os pontos de contato: antes, durante e depois}}
-  \item[$\square$] {\small\textcolor{cmuted}{Identifica dores e oportunidades de design}}
-  \item[$\square$] {\small\textcolor{cmuted}{Apresentação visual clara com boa hierarquia}}
-\end{itemize}
-
-\subsection{Mapa de Empatia — Apresentação Visual}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Os quatro quadrantes preenchidos e organizados visualmente}}
-  \item[$\square$] {\small\textcolor{cmuted}{A diagramação é clara — dá pra ler sem esforço}}
-  \item[$\square$] {\small\textcolor{cmuted}{Há hierarquia visual entre os elementos}}
-\end{itemize}
-
-\subsection{POV + Problema + Solução — Clareza}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O POV está formulado de forma clara e direta}}
-  \item[$\square$] {\small\textcolor{cmuted}{O problema é específico e bem descrito}}
-  \item[$\square$] {\small\textcolor{cmuted}{A solução é coerente com o problema identificado}}
-\end{itemize}
-
-\subsection{Documentos de Ideação — Qualidade Visual}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Os documentos estão bem diagramados}}
-  \item[$\square$] {\small\textcolor{cmuted}{Hierarquia visual clara: títulos, seções e conteúdo distinguíveis}}
-\end{itemize}
-
-\subsection{Style Guide — Identidade Visual do Projeto}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Paleta de cores com justificativa baseada em psicologia das cores}}
-  \item[$\square$] {\small\textcolor{cmuted}{Tipografia escolhida com critério: hierarquia, legibilidade, caráter}}
-  \item[$\square$] {\small\textcolor{cmuted}{Coerente com o ODS e com o tom da solução}}
-\end{itemize}
-
-\subsection{Gramática Visual — Princípios de Gestalt}
-
-\noindent\statuswarn{0,00\,/\,1,25 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O layout aplica princípios de Gestalt de forma intencional}}
-  \item[$\square$] {\small\textcolor{cmuted}{Proximidade: elementos relacionados estão agrupados}}
-  \item[$\square$] {\small\textcolor{cmuted}{Similaridade: elementos com mesma função têm mesma aparência}}
-  \item[$\square$] {\small\textcolor{cmuted}{Continuidade e/ou pregnância aplicados}}
-\end{itemize}
-
-\subsection{Cor e Tipografia no Protótipo}
-
-\noindent\statuswarn{0,00\,/\,1,25 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{A paleta do Style Guide foi aplicada com consistência}}
-  \item[$\square$] {\small\textcolor{cmuted}{Contraste adequado entre texto e fundo}}
-  \item[$\square$] {\small\textcolor{cmuted}{Hierarquia tipográfica clara: título, subtítulo, corpo, label}}
-\end{itemize}
-
-\subsection{Affordance, Feedback e Microinterações}
-
-\noindent\statuswarn{0,00\,/\,1,25 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Botões e elementos interativos são visualmente reconhecíveis}}
-  \item[$\square$] {\small\textcolor{cmuted}{O fluxo indica feedback claro após uma ação}}
-  \item[$\square$] {\small\textcolor{cmuted}{Estados de hover/foco/ativo estão pensados}}
-  \item[$\square$] {\small\textcolor{cmuted}{Microinterações ou transições foram consideradas}}
-\end{itemize}
-
-\subsection{Jornada e Fluxo de Tarefas no Protótipo}
-
-\noindent\statuswarn{0,00\,/\,1,25 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O protótipo reflete a jornada do usuário mapeada}}
-  \item[$\square$] {\small\textcolor{cmuted}{O fluxo de tarefas está claro — navegação lógica}}
-  \item[$\square$] {\small\textcolor{cmuted}{O diagrama de telas mostra como as páginas se conectam}}
-\end{itemize}
-
-\subsection{Progressão: Baixa → Média → Alta Fidelidade}
-
-\noindent\statuswarn{0,00\,/\,1,00 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Os três níveis foram entregues}}
-  \item[$\square$] {\small\textcolor{cmuted}{O wireframe de baixa resolve estrutura e fluxo}}
-  \item[$\square$] {\small\textcolor{cmuted}{O de média incorpora identidade visual}}
-  \item[$\square$] {\small\textcolor{cmuted}{O de alta é o protótipo navegável final no Figma}}
-\end{itemize}
-
-\subsection{Consistência Visual Geral}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O projeto tem identidade visual coesa}}
-  \item[$\square$] {\small\textcolor{cmuted}{Todos os documentos entregues têm coerência visual entre si}}
-  \item[$\square$] {\small\textcolor{cmuted}{O protótipo é consistente com o Style Guide}}
-\end{itemize}
-
-\section{Avaliação Geral}
-
-\notadestaque{0,00}{6,00}
-
-A Fase~1 foi concluída. A seguir o resumo dos critérios e os comentários por critério.
-
-\subsection{Resumo dos Critérios}
-
-\rowcolors{2}{crow}{white}
-\begin{tabular}{@{} L{2.8cm} C{2.0cm} C{1.1cm} C{1.1cm} @{}}
-\toprule
-\textbf{Critério} & \textbf{Status} & \textbf{Nota} & \textbf{Máx.} \\
-\midrule
-Estrutura e Completude & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Qualidade da Escrita e Argumentação & \statuswarn{Não entregue} & \textbf{0,00} & 0,75 \\
-Referências e Fontes & \statuswarn{Não entregue} & \textbf{0,00} & 0,25 \\
-Protótipo Navegável e Completo & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Fidelidade à Identidade Visual & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Clareza e Fluidez da Apresentação & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Slides — Qualidade Visual & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Capacidade de Justificar Decisões & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-Organização e Uso Real do Trello & \statuswarn{Não entregue} & \textbf{0,00} & 0,75 \\
-Sprint Reviews & \statuswarn{Não entregue} & \textbf{0,00} & 0,75 \\
-Estrutura e Padrão de Nomenclatura & \statuswarn{Não entregue} & \textbf{0,00} & 0,50 \\
-\midrule
-\textbf{Total} & & \textbf{\color{cred}0,00} & \textbf{6,00} \\
-\bottomrule
-\end{tabular}
-
-\section{Comentários por Critério}
-
-\subsection{Estrutura e Completude}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O documento segue o template definido}}
-  \item[$\square$] {\small\textcolor{cmuted}{Todas as seções estão preenchidas}}
-  \item[$\square$] {\small\textcolor{cmuted}{O documento está em PDF com nomenclatura correta}}
-\end{itemize}
-
-\subsection{Qualidade da Escrita e Argumentação}
-
-\noindent\statuswarn{0,00\,/\,0,75 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O texto é claro, objetivo e bem escrito}}
-  \item[$\square$] {\small\textcolor{cmuted}{As decisões do projeto são justificadas}}
-  \item[$\square$] {\small\textcolor{cmuted}{A argumentação é coerente com os documentos de DT e DCU}}
-\end{itemize}
-
-\subsection{Referências e Fontes}
-
-\noindent\statuswarn{0,00\,/\,0,25 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Dados e afirmações têm fonte citada}}
-  \item[$\square$] {\small\textcolor{cmuted}{Há pelo menos 3 fontes referenciadas}}
-  \item[$\square$] {\small\textcolor{cmuted}{Referências formatadas de forma consistente}}
-\end{itemize}
-
-\subsection{Protótipo Navegável e Completo}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O protótipo está navegável no Figma — não são telas soltas}}
-  \item[$\square$] {\small\textcolor{cmuted}{Cobre o fluxo principal com pelo menos 3 telas conectadas}}
-  \item[$\square$] {\small\textcolor{cmuted}{Um usuário externo consegue navegar sem explicação}}
-\end{itemize}
-
-\subsection{Fidelidade à Identidade Visual}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O protótipo é consistente com o Style Guide}}
-  \item[$\square$] {\small\textcolor{cmuted}{Cor, tipografia e componentes seguem o planejado}}
-\end{itemize}
-
-\subsection{Clareza e Fluidez da Apresentação}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O grupo apresenta com segurança — não lê do slide}}
-  \item[$\square$] {\small\textcolor{cmuted}{Todos os integrantes participam}}
-  \item[$\square$] {\small\textcolor{cmuted}{O tempo de 7 minutos é respeitado}}
-\end{itemize}
-
-\subsection{Slides — Qualidade Visual}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Os slides são visuais — não são paredes de texto}}
-  \item[$\square$] {\small\textcolor{cmuted}{Hierarquia tipográfica clara}}
-  \item[$\square$] {\small\textcolor{cmuted}{A identidade visual do projeto está presente nos slides}}
-\end{itemize}
-
-\subsection{Capacidade de Justificar Decisões}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O grupo responde perguntas sobre as escolhas com segurança}}
-  \item[$\square$] {\small\textcolor{cmuted}{Sabe explicar por que fez o que fez}}
-  \item[$\square$] {\small\textcolor{cmuted}{Quando não sabe, reconhece honestamente}}
-\end{itemize}
-
-\subsection{Organização e Uso Real do Trello}
-
-\noindent\statuswarn{0,00\,/\,0,75 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{O quadro tem as colunas corretas: Backlog, To Do, Doing, Done e Referências}}
-  \item[$\square$] {\small\textcolor{cmuted}{Os cards têm título no formato verbo no imperativo}}
-  \item[$\square$] {\small\textcolor{cmuted}{O histórico mostra uso ao longo do semestre}}
-\end{itemize}
-
-\subsection{Sprint Reviews}
-
-\noindent\statuswarn{0,00\,/\,0,75 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Ao menos 3 Sprint Reviews foram preenchidos}}
-  \item[$\square$] {\small\textcolor{cmuted}{Os reviews têm reflexão real: entregas, pendências, impedimentos e aprendizados}}
-  \item[$\square$] {\small\textcolor{cmuted}{Há honestidade sobre o processo}}
-\end{itemize}
-
-\subsection{Estrutura e Padrão de Nomenclatura}
-
-\noindent\statuswarn{0,00\,/\,0,50 pts · Não entregue}
-
-\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
-  \item[$\square$] {\small\textcolor{cmuted}{Todos os arquivos estão na pasta correta do Drive}}
-  \item[$\square$] {\small\textcolor{cmuted}{Os arquivos seguem o padrão de nomenclatura}}
-  \item[$\square$] {\small\textcolor{cmuted}{A indicação de turma (\_A ou \_B) está correta em todos}}
-\end{itemize}
-
-\section{Considerações Finais}
-
-Os ajustes indicados são de natureza metodológica e devem ser
-incorporados antes do avanço para a Fase~2 (Definição).
+Os ajustes indicados s\~ao de natureza metodol\'{o}gica e devem ser
+incorporados antes do avan\c{c}o para a pr\'{o}xima fase.
 Continuem assim.
 
 % ── Assinatura ───────────────────────────────────────────────
@@ -617,10 +308,8 @@ Continuem assim.
 
 \begin{flushright}
 \textbf{Profa.\ Samara Silva}\\
-{\small\color{cmuted} Design Thinking --- DE\_233 · ETE Cícero Dias}\\
+{\small\color{cmuted} M\'{o}dulo 1 \textperiodcentered\ ETE C\'{i}cero Dias}\\
 {\small\color{cmuted} Recife, 1 de junho de 2026}
 \end{flushright}
-
-% ── Sem referências bibliográficas ───────────────────────────
 
 \end{document}
