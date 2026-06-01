@@ -6,6 +6,7 @@
 
 \documentclass[
   sigconf,
+  nonacm, % Remove o rodapé da ACM
   language=portuguese
 ]{acmart}
 
@@ -27,6 +28,11 @@
 \usepackage{graphicx}
 \usepackage{adjustbox}
 \usepackage{fancyhdr}
+\usepackage{eso-pic} % Para a capa preencher toda a página sem gerar páginas em branco
+
+% ── Ajuste contra quebras de texto ruins (Textos Cortados) ──
+\tolerance=1000
+\emergencystretch=1.5em
 
 % ── Cores ───────────────────────────────────────────────────
 \definecolor{cgood}{HTML}{1E6B3A}
@@ -57,30 +63,38 @@
 }
 
 % ────────────────────────────────────────────────────────────
-\AtBeginDocument{\pagestyle{empty}}
 \begin{document}
-\thispagestyle{empty}
 
 % ── CAPA ────────────────────────────────────────────────────
 \thispagestyle{empty}
-{
-  \newgeometry{top=0cm,bottom=0cm,left=0cm,right=0cm}
-  \IfFileExists{capa.png}{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{capa.png}}{
-    \IfFileExists{../../capa.png}{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{../../capa.png}}{
-      \vspace*{6cm}\begin{center}{\large\color{gray}[capa.png nao encontrada]}\end{center}
-    }
-  }
-  \restoregeometry
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{%
+    \IfFileExists{capa.png}{%
+      \includegraphics[width=\paperwidth,height=\paperheight]{capa.png}%
+    }{%
+      \IfFileExists{../../capa.png}{%
+        \includegraphics[width=\paperwidth,height=\paperheight]{../../capa.png}%
+      }{%
+        \parbox[b][\paperheight]{\paperwidth}{%
+          \vspace*{10cm}\begin{center}{\large\color{gray}[capa.png não encontrada]}\end{center}%
+        }%
+      }%
+    }%
+  }%
 }
+\mbox{} % Caixa vazia para garantir que a página da capa seja gerada e preenchida
 \clearpage
+
+% ── CONFIGURAÇÃO DE PÁGINA PÓS-CAPA ─────────────────────────
 \setcounter{page}{1}
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[C]{\thepage}
+\setlength{\headsep}{0.8cm} % Distancia o cabeçalho do conteúdo das colunas
 
 % ── METADADOS ────────────────────────────────────────────────
-\title{Devolutiva de Avaliação: Fase 1 --- Imersão}
+\title{Feedback Avaliativo de Projeto: Design Thinking}
 
 \author{Profa.\ Samara Silva}
 \authornote{Grupo: \textbf{Grupo 01 - Fome Zero} \textperiodcentered\ Per\'{i}odo: 04-21 de maio de 2026 \textperiodcentered\ Avaliado em: 1 de junho de 2026.}
@@ -113,7 +127,7 @@ A Fase~1 foi concluída. A seguir o resumo dos critérios e os comentários por 
 \subsection{Resumo dos Critérios}
 
 \rowcolors{2}{crow}{white}
-\begin{tabular}{@{} L{2.8cm} C{2.0cm} C{1.1cm} C{1.1cm} @{}}
+\begin{tabular}{@{} L{2.6cm} C{2.5cm} C{1.1cm} C{1.1cm} @{}}
 \toprule
 \textbf{Critério} & \textbf{Status} & \textbf{Nota} & \textbf{Máx.} \\
 \midrule
@@ -225,6 +239,7 @@ Continuem assim.
 
 % ── Assinatura ───────────────────────────────────────────────
 
+\vspace{1.5em}
 \noindent\rule{\linewidth}{0.4pt}
 
 \begin{flushright}
@@ -243,7 +258,7 @@ Esta seção apresenta os critérios de avaliação para referência dos estudan
 
 \subsection{Níveis de Completude}
 
-\begin{tabular}{@{} p{3cm} p{0.8cm} p{9.5cm} @{}}
+\begin{tabularx}{\linewidth}{@{} p{4cm} p{1.5cm} X @{}}
 \toprule
 \textbf{Nível} & \textbf{\%} & \textbf{Descrição} \\
 \midrule
@@ -257,11 +272,12 @@ Faltou muito e errou & 25\% & Fez pouco e ainda errou. Esforço baixo, qualidade
 Errado & 10\% & Tentou, mas a abordagem foi incorreta por completo. Reconhece a tentativa. \\
 Não fez & 0\% & Critério não entregue. \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 
+\vspace{1em}
 \subsection{Penalizações por Atraso}
 
-\begin{tabular}{@{} p{3.5cm} p{5cm} @{}}
+\begin{tabularx}{0.6\linewidth}{@{} X p{5cm} @{}}
 \toprule
 \textbf{Atraso} & \textbf{Desconto} \\
 \midrule
@@ -270,7 +286,7 @@ Até 1 dia & -10\% \\
 Mais de 3 dias & -30\% \\
 Não entregou & Zera a nota \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 
 \section{Devolutiva Individual}
 
@@ -278,7 +294,7 @@ A nota individual é calculada aplicando o fator de contribuição sobre a nota 
 
 \subsection{Fatores de Contribuição}
 
-\begin{tabular}{@{} p{4cm} c @{}}
+\begin{tabularx}{0.6\linewidth}{@{} X c @{}}
 \toprule
 \textbf{Fator} & \textbf{Multiplicador} \\
 \midrule
@@ -288,11 +304,12 @@ Participou pouco & 70\% \\
 Só fez sua parte & 40\% \\
 Não participou & 0\% \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 
+\vspace{1em}
 \subsection{Notas por Integrante}
 
-\begin{tabular}{@{} p{3.5cm} >{\raggedright\arraybackslash}p{3.5cm} p{2cm} @{}}
+\begin{tabularx}{\linewidth}{@{} X X p{2.5cm} @{}}
 \toprule
 \textbf{Integrante} & \textbf{\small DT Fase 1 — Imersão} & \textbf{Total} \\
 \midrule
@@ -303,6 +320,6 @@ Suammyr Cavalcante do Carmo & 3,27 \textit{(Liderou)} & \textbf{3,27} \\
 Maria Zilda Ferreira Pinto & 3,27 \textit{(Participou)} & \textbf{3,27} \\
 Ayran Gabriel Duque Souza Lima & 0,00 \textit{(Não participou)} & \textbf{0,00} \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 
 \end{document}
