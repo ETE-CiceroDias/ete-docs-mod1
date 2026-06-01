@@ -1,0 +1,510 @@
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%  Devolutiva — Fase 1: Imersão
+%  Disciplina: Design Thinking (DE_233) — ETE Cícero Dias
+%  Profa. Samara Silva  ·  Recife, 1 de junho de 2026
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\documentclass[
+  sigconf,
+  nonacm, % Remove o rodapé da ACM
+  language=portuguese
+]{acmart}
+
+% ── Desliga rodapé ACM ──────────────────────────────────────
+\settopmatter{printacmref=false}
+\setcopyright{none}
+\acmYear{2026}
+\let\balance\relax
+
+% ── Mata a página temporária da ACM (compilação única via API) ──
+\makeatletter
+\def\acm@addtemp@page{}
+\makeatother
+
+% ── Pacotes ─────────────────────────────────────────────────
+\usepackage[portuguese]{babel}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage[inline]{enumitem}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{fancyhdr}
+\usepackage{eso-pic} % Para a capa preencher toda a página sem gerar páginas em branco
+
+% ── Ajuste contra quebras de texto ruins (Textos Cortados) ──
+\tolerance=1000
+\emergencystretch=1.5em
+
+% ── Cores ───────────────────────────────────────────────────
+\definecolor{cgood}{HTML}{1E6B3A}
+\definecolor{cwarn}{HTML}{8B4500}
+\definecolor{cred}{HTML}{C0392B}
+\definecolor{cmuted}{HTML}{666666}
+\definecolor{crow}{HTML}{F2EFEB}
+
+% ── Colunas customizadas para tabela ────────────────────────
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% ── Comando nota destacada ───────────────────────────────────
+\newcommand{\notadestaque}[2]{%
+  \noindent\textbf{Nota:}\enspace%
+  {\large\bfseries\color{cred}#1\,/\,#2\,pts}%
+}
+
+% ── Comando label de status ──────────────────────────────────
+\newcommand{\statusok}[1]{{\small\bfseries\color{cgood}#1}}
+\newcommand{\statuswarn}[1]{{\small\bfseries\color{cwarn}#1}}
+
+% ── Renomeações PT-BR ────────────────────────────────────────
+\AtBeginDocument{%
+  \renewcommand{\abstractname}{Resumo}
+  \renewcommand{\figurename}{Figura}
+  \renewcommand{\tablename}{Tabela}
+}
+
+% ────────────────────────────────────────────────────────────
+\begin{document}
+
+% ── CAPA ────────────────────────────────────────────────────
+\thispagestyle{empty}
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{%
+    \IfFileExists{capa.png}{%
+      \includegraphics[width=\paperwidth,height=\paperheight]{capa.png}%
+    }{%
+      \IfFileExists{../../capa.png}{%
+        \includegraphics[width=\paperwidth,height=\paperheight]{../../capa.png}%
+      }{%
+        \parbox[b][\paperheight]{\paperwidth}{%
+          \vspace*{10cm}\begin{center}{\large\color{gray}[capa.png não encontrada]}\end{center}%
+        }%
+      }%
+    }%
+  }%
+}
+\mbox{} % Caixa vazia para garantir que a página da capa seja gerada e preenchida
+\clearpage
+
+% ── CONFIGURAÇÃO DE PÁGINA PÓS-CAPA ─────────────────────────
+\setcounter{page}{1}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+\setlength{\headsep}{0.8cm} % Distancia o cabeçalho do conteúdo das colunas
+
+% ── METADADOS ────────────────────────────────────────────────
+\title{Feedback Avaliativo de Projeto: Design Thinking --- Fase 1 — Imersão}
+
+\author{Profa.\ Samara Silva}
+\authornote{Grupo: \textbf{Grupo 03 - Doação de Alimentos} \textperiodcentered\ Per\'{i}odo: 04-21 de maio de 2026 \textperiodcentered\ Avaliado em: 1 de junho de 2026.}
+\email{samarasilvia.educa@gmail.com}
+\affiliation{%
+  \institution{ETE C\'{i}cero Dias}
+  \department{M\'{o}dulo 1 --- Turma A · 2026.1}
+  \city{Recife}
+  \state{Pernambuco}
+  \country{Brasil}
+}
+
+\author{Grupo 03 - Doação de Alimentos}
+\affiliation{%
+  \institution{ETE C\'{i}cero Dias}
+  \department{Turma --- Turma A · 2026.1}
+  \city{Recife}
+  \state{Pernambuco}
+  \country{Brasil}
+}
+\maketitle
+
+\vspace{1em}
+\section{Avaliação Geral}
+
+\notadestaque{2,09}{3,50}
+
+A avaliação foi concluída. A seguir o resumo dos critérios e os comentários detalhados.
+
+\subsection{Resumo dos Critérios}
+
+\rowcolors{2}{crow}{white}
+\begin{tabular}{@{} L{2.6cm} C{2.5cm} C{1.1cm} C{1.1cm} @{}}
+\toprule
+\textbf{Critério} & \textbf{Status} & \textbf{Nota} & \textbf{Máx.} \\
+\midrule
+Pesquisa Desk & \statuswarn{Completo c/ ressalvas} & \textbf{0,42} & 0,50 \\
+Matriz de Alinhamento & \statuswarn{Faltou pouco c/ erros} & \textbf{0,30} & 0,50 \\
+Matriz CSD \& Perguntas de pesquisa & \statuswarn{Completo c/ ressalvas} & \textbf{0,42} & 0,50 \\
+Pesquisa Primária & \statuswarn{Faltou muito e errou} & \textbf{0,25} & 1,00 \\
+Relatório de Imersão & \statuswarn{Completo, mas inadequado} & \textbf{0,70} & 1,00 \\
+\midrule
+\textbf{Total} & & \textbf{\color{cred}2,09} & \textbf{3,50} \\
+\bottomrule
+\end{tabular}
+
+\section{Comentários por Critério}
+
+\subsection{Pesquisa Desk}
+
+\noindent\statuswarn{0,42\,/\,0,50 pts · Completo c/ ressalvas}
+
+\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Dados secundários relevantes e atuais sobre o ODS escolhido}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Fontes confiáveis: ONU, IBGE, artigos acadêmicos ou jornalísticos}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Contextualiza o problema com base factual}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Conexão clara entre os dados e o problema}}
+  \item[$\square$] {\small\textcolor{cmuted}{Coerência entre a CSD e o que foi pesquisado}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Mínimo de 5 referências/links, esperado 8, ideal de 15 para cima}}
+\end{itemize}
+
+Outro ponto que merece atenção é a coerência entre a Matriz CSD e as pesquisas realizadas durante a etapa de imersão. Conforme evidenciado pela ausência de atendimento a esse critério, não foi possível identificar uma conexão clara entre parte das dúvidas levantadas na CSD e os dados posteriormente coletados.
+
+A matriz apresenta perguntas e dúvidas bastante pertinentes e estratégicas, demonstrando uma boa reflexão inicial sobre o problema. No entanto, muitas dessas questões não foram contempladas na pesquisa secundária (artigos, notícias, relatórios, sites e demais fontes consultadas), o que gera uma lacuna entre o que o grupo declarou precisar descobrir e aquilo que efetivamente investigou.
+
+Também não foi possível verificar se essas dúvidas foram respondidas por meio da pesquisa de campo. Considerando a quantidade reduzida de perguntas presentes no formulário, há indícios de que parte significativa das questões levantadas na CSD permaneceu sem validação.
+
+É importante lembrar que a Matriz CSD não deve ser tratada apenas como uma atividade isolada. As dúvidas registradas nela devem orientar as etapas seguintes da pesquisa, servindo como direcionadoras da investigação. Ao final da imersão, espera-se que a maior parte dessas dúvidas tenha sido respondida, validada ou refutada por meio das evidências coletadas.
+
+Como sugestão de melhoria, recomenda-se revisar as dúvidas levantadas na CSD e verificar, para cada uma delas, qual fonte de pesquisa foi utilizada para respondê-la e quais evidências foram encontradas. Esse exercício contribui para fortalecer o rigor metodológico e a rastreabilidade das decisões tomadas ao longo do projeto.
+
+\subsection{Matriz de Alinhamento}
+
+\noindent\statuswarn{0,30\,/\,0,50 pts · Faltou pouco c/ erros}
+
+\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Identifica claramente quem é afetado pelo problema}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Define o que o grupo pretende descobrir durante a imersão}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{As técnicas de imersão escolhidas são coerentes com os objetivos da pesquisa}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Delimita adequadamente o que está dentro do escopo do projeto}}
+  \item[$\square$] {\small\textcolor{cmuted}{Delimita adequadamente o que está fora do escopo do projeto}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Apresenta uma hipótese inicial de solução relacionada ao problema investigado}}
+  \item[$\square$] {\small\textcolor{cmuted}{Os resultados esperados da imersão são claros e coerentes com os objetivos da pesquisa}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Há coerência entre os diferentes campos da matriz (problema, público, escopo, pesquisa e solução)}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Preenchida com respostas, impressões ou perguntas reais do grupo sobre o problema}}
+  \item[$\square$] {\small\textcolor{cmuted}{Linguagem clara e coerente, facilitando a compreensão das intenções do grupo}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Serviu de base para planejar a pesquisa primária}}
+\end{itemize}
+
+A matriz de alinhamento apresenta algumas inconsistências que precisam ser ajustadas. Em particular, observei que a linguagem em algumas partes está no tempo verbal incorreto, o que acabou dificultando a interpretação do conteúdo. 
+
+Por exemplo:
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item "Algumas pessoas já têm" → presente do indicativo ✅
+  \item "outras que ainda não doaram" → pretérito perfeito ❌
+  \item "também têm interesse" → presente do indicativo ✅
+  \item "falta direcionamento" → presente do indicativo ✅
+\end{itemize}
+
+Embora esse ponto não seja crítico, ele compromete a uniformidade e a clareza da matriz, o que comprometeu a minha interpretação. Recomenda-se que a seção “O que o grupo quer descobrir?” esteja sempre no \textbf{presente}, refletindo a situação atual, e seja apresentada de forma direta ou narrativa, sem misturar tempos verbais ou repetir ideias.
+
+Sugestões de formulação:
+
+\begin{enumerate}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item \textbf{Versão em tópicos (direta):}
+\end{enumerate}
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item O costume das pessoas em doar alimentos.
+  \item O interesse de pessoas que ainda não doaram em realizar doações.
+  \item Se existe direcionamento sobre como e onde realizar doações.
+\end{itemize}
+
+\begin{enumerate}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item \textbf{Versão narrativa (fluida):}
+\end{enumerate}
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item “Queremos descobrir se as pessoas têm o costume de doar alimentos, se aquelas que ainda não doaram possuem interesse em doar, e se existe direcionamento sobre como e onde realizar essas doações.”
+\end{itemize}
+
+Outro ponto relevante refere-se ao tópico \textbf{“O que está fora do escopo”}, que não foi preenchido. Este campo deve indicar aspectos que estão além do controle do grupo, como políticas públicas, ações governamentais ou legislações. Por exemplo, iniciativas para fomentar doações de alimentos ou leis específicas do país. É fundamental que essa seção seja preenchida, pois não pode permanecer em branco.
+
+Quanto ao \textbf{“Resultado esperado da imersão”}, observei que há uma interpretação incorreta. O objetivo da imersão não é resolver o problema diretamente por meio de pesquisas passivas, mas sim aprofundar o conhecimento sobre o contexto, coletar dados e entender o panorama do problema. Portanto, este tópico deve indicar o que se espera compreender, como esclarecer dúvidas e identificar limites e padrões da questão investigada.
+
+Também é importante evitar a repetição ao expressar o problema da doação de alimentos e seu desperdício. A clareza na formulação do problema contribui para uma análise mais consistente e estratégica.
+
+Por fim, em relação ao público afetado, sugiro refletir se ele está completamente mapeado. Limitar-se apenas a pessoas em situação de rua ou com menor condição financeira pode não contemplar todos os impactos do problema. Famílias de classe média, por exemplo, também podem ser afetadas e merecem ser consideradas no estudo.
+
+\subsection{Matriz CSD \& Perguntas de pesquisa}
+
+\noindent\statuswarn{0,42\,/\,0,50 pts · Completo c/ ressalvas}
+
+\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Os três quadrantes preenchidos: Certezas, Suposições, Dúvidas}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Reflete o que o grupo sabe e precisa descobrir sobre o problema e seu contexto}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Conteúdo específico do projeto — não genérico}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Revela pensamento crítico}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{O quadrante de CERTEZAS expõe informações comprovadas ou confirmadas sobre o problema}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Os itens do quadrante de CERTEZA estão relacionados diretamente ao contexto e ao público afetado}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{O quadrante de SUPOSIÇÕES expõe Informações que o grupo acha que são verdadeiras, mas ainda não comprovou}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Os itens do quadrante de SUPOSIÇÃO demonstram reflexão sobre possíveis causas, comportamentos ou necessidades}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{O quadrante de DÚVIDAS expõem perguntas que o grupo precisa responder na pesquisa ou imersão como um todo}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Os itens do quadrante de DÚVIDAS representam lacunas reais de conhecimento}}
+  \item[$\square$] {\small\textcolor{cmuted}{O conteúdo da matriz está focado no problema investigado e não apenas no tema ou na ODS}}
+  \item[$\square$] {\small\textcolor{cmuted}{Perguntas de Pesquisas formuladas como objetivos que norteiam o projeto geral}}
+\end{itemize}
+
+A Matriz CSD foi preenchida de maneira geral correta, demonstrando compreensão da ferramenta. No entanto, identifiquei alguns pontos que precisam de ajustes para garantir que a matriz cumpra plenamente seu propósito dentro da etapa de imersão.
+
+\textbf{Matriz CSD}
+
+\begin{enumerate}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item \textbf{Coluna de Certezas}
+\end{enumerate}
+
+Na seção de certezas, foram incluídas informações relacionadas aos Objetivos de Desenvolvimento Sustentável (ODS). Embora o problema esteja conectado às ODS, o foco da CSD deve estar na \textbf{análise e alinhamento do problema} que está sendo investigado, e não nas ODS em si. Certamente, a inclusão pode ter sido feita para atender ao limite de itens da matriz, mas é importante priorizar o contexto do problema, o público-alvo e as condições atuais relacionadas ao tema. Por exemplo, considerar apenas “a doação ajuda pessoas em vulnerabilidade” já é suficiente para essa coluna, desde que bem formulado.
+
+\begin{enumerate}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item \textbf{Coluna de Suposições}
+\end{enumerate}
+
+Três itens desta coluna foram preenchidos com foco na solução, o que não é adequado para a etapa de imersão. A etapa atual é voltada para \textbf{entender o problema em profundidade}, identificar hipóteses sobre o contexto e o público, e não propor soluções. As suposições apresentadas, como:
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item "O sistema poderá reduzir perdas de alimentos ainda próprios para consumo."
+  \item "O sistema pode ajudar a monitorar validade e quantidade dos alimentos."
+  \item "O sistema pode aproximar doadores e instituições rapidamente."
+\end{itemize}
+
+estão mais relacionadas à \textbf{solução imaginada} pelo grupo do que ao problema investigado.
+
+Na etapa de Imersão, as perguntas principais devem refletir:
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item "Qual é o problema?"
+  \item "Quem é afetado?"
+  \item "Por que isso acontece?"
+  \item "Quais necessidades existem?"
+  \item "Como as pessoas lidam com isso hoje?"
+\end{itemize}
+
+As suposições da CSD deveriam, portanto, propor hipóteses sobre o contexto e o problema, como:
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item "Muitas pessoas gostariam de doar alimentos, mas não sabem onde doar."
+  \item "Parte dos alimentos é desperdiçada por falta de conexão entre doadores e instituições."
+  \item "As instituições têm dificuldade para divulgar suas necessidades."
+  \item "Existem pessoas interessadas em receber doações que não sabem onde buscar ajuda."
+\end{itemize}
+
+Frases sobre “\textbf{\textit{o sistema poderá…” }}são mais apropriadas para etapas posteriores, como: Ideação, Hipóteses de solução, Proposta de Valor, Canvas da Solução ou Protótipo.
+
+Para evitar essa confusão, recomenda-se criar um \textbf{checkpoint específico}:
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item As suposições estão relacionadas ao problema e ao contexto investigado, e não à validação de uma solução.
+  \item Evita-se antecipar soluções durante a etapa de imersão.
+\end{itemize}
+
+Esse é um erro comum em Design Thinking: os alunos se apaixonam pela ideia da solução logo no início e passam a investigar se ela funciona, quando o foco da imersão deve ser \textbf{verificar se o problema existe da forma imaginada}.
+
+Como avaliadora, não marcaria como “errado”, mas faria a seguinte ressalva:
+
+"As suposições apresentadas concentram-se nos possíveis benefícios da solução proposta. Nesta etapa, recomenda-se formular hipóteses relacionadas ao problema, ao público e ao contexto investigado, deixando a avaliação da solução para as etapas posteriores do processo."
+
+Essa observação está tecnicamente alinhada com a metodologia de Design Thinking e justifica bem uma avaliação do tipo \textbf{“completo com ressalvas”} ou \textbf{“faltou pouco”}, dependendo do restante da entrega.
+
+\begin{enumerate}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item \textbf{Coluna de Dúvidas}
+\end{enumerate}
+
+A coluna de Dúvidas está correta e adequada. As questões levantadas são pertinentes e contribuem para direcionar a investigação, não havendo ajustes necessários nesse aspecto. Parabéns ao grupo pelas formulações.
+
+\begin{enumerate}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item \textbf{Formatação}
+\end{enumerate}
+
+Vale reforçar a importância de revisar a formatação do Excel para garantir clareza e legibilidade. É essencial que todos os tópicos estejam preenchidos de forma completa e organizada.
+
+\textit{\textbf{Perguntas de Pesquisa}}
+
+Há um desvio metodológico importante na etapa de planejamento das perguntas de pesquisa que precisa ser corrigido: \textbf{houve uma sobreposição entre as Perguntas de Pesquisa e o Roteiro/Formulário do usuário. }Para o rigor acadêmico e prático do Design de Serviços/Produtos, é fundamental distinguir estas três camadas:
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item \textbf{Dúvidas (Matriz CSD):} Representam as incertezas internas do grupo. É o levantamento bruto do que a equipe não sabe. ex:\textit{"Os estudantes preferem estudar pelo celular ou pelo notebook?"}
+  \item \textit{"Eles ainda têm o costume de usar agenda de papel?"}
+  \item \textit{"Quanto tempo eles conseguem focar antes de pegar o celular?"}
+\end{itemize}
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item \textbf{Perguntas de Pesquisa:} São os objetivos da investigação. Elas guiam o \textit{projeto} e a \textit{equipe}, sintetizando as dúvidas e suposições da CSD em grandes eixos investigativos. \textbf{Essas perguntas não devem ser feitas diretamente ao usuário. }ex:\textit{"Quais são os principais métodos e ferramentas de organização utilizados por universitários hoje, e quais são os maiores gatilhos comportamentais de distração durante o estudo?"}
+\end{itemize}
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item \textbf{Roteiro/Formulário de Pesquisa:} É o instrumento de coleta. Aqui, as perguntas de pesquisa são traduzidas para a linguagem do usuário, de forma conversacional e empática, para evitar vieses. ex:\textit{"Você poderia me contar como costuma se organizar quando tem uma semana cheia de provas?"}
+  \item \textit{"Lembre da última vez que você sentou para estudar e acabou perdendo o foco. Como foi isso? O que acabou tirando a sua atenção?"}
+\end{itemize}
+
+\textbf{O impacto desse erro:} Em vez de definirem os eixos estratégicos que o projeto precisa investigar, a equipe inseriu as perguntas de interação direta com o usuário no lugar das Perguntas de Pesquisa. Ao fazer isso, o projeto perde o seu "norte" analítico.
+
+Por exemplo: a questão que vocês listaram, \textit{"Sobre o descarte de alimentos na sua casa: Quando você prepara refeições, o que costuma fazer com as partes não convencionais dos vegetais e frutas (cascas, talos, folhas e sementes)?"}, é uma excelente pergunta de \textbf{Formulário/Roteiro} para fazer ao usuário. No entanto, a verdadeira \textbf{Pergunta de Pesquisa} (que deveria estar preenchendo essa seção do documento para guiar a equipe) deveria ser algo como: \textbf{"Quais são os hábitos atuais de descarte e o nível de aproveitamento integral dos alimentos na rotina doméstica do nosso público?"}
+
+\textbf{Ação necessária:} Revisar o instrumento de pesquisa. Desdobrem as Perguntas de Pesquisa atuais em perguntas adequadas e táticas.
+
+\subsection{Pesquisa Primária}
+
+\noindent\statuswarn{0,25\,/\,1,00 pts · Faltou muito e errou}
+
+O formulário de pesquisa apresenta \textbf{fragilidades significativas }que comprometem sua efetividade como instrumento de coleta de dados na etapa de imersão.
+
+Embora a descrição inicial tenha sido preenchida adequadamente, contendo informações sobre grupo, curso, instituição, objetivo e tempo estimado, diversos \textbf{critérios essenciais não foram atendidos.}
+
+\textbf{Estrutura básica do formulário}
+
+Primeiramente, a estrutura básica do formulário não foi completamente respeitada. Não foi identificada uma capa ou elemento visual introdutório relacionado ao tema da pesquisa, conforme solicitado. Além disso, não foram incluídas perguntas de perfil do usuário ou dados demográficos, o que dificulta a caracterização da amostra e limita análises posteriores.
+
+\textbf{Estrutura das Perguntas}
+
+A quantidade de perguntas também ficou muito abaixo do mínimo esperado. Foram elaboradas apenas quatro perguntas, quando o requisito estabelecido previa um mínimo de cinco, sendo recomendadas oito e idealmente quinze questões. Essa limitação reduz significativamente a profundidade da investigação e dificulta a obtenção de evidências suficientes para compreender o problema de forma abrangente.
+
+Outro ponto de atenção é a qualidade da construção do formulário. Algumas seções apresentavam problemas de revisão e formatação, incluindo campos que não continham perguntas propriamente ditas, literalmente tinha um campo vazio com o título "Opção 01", o que compromete a clareza do instrumento e pode gerar dúvidas nos participantes durante o preenchimento.
+
+Também não foi observada diversidade nos tipos de perguntas utilizadas. A coleta ficou excessivamente concentrada em um único formato, limitando a riqueza dos dados obtidos. Em pesquisas de imersão, é importante combinar perguntas fechadas e abertas para capturar tanto informações quantitativas quanto percepções, experiências e comportamentos dos participantes.
+
+\textbf{Formulário no Relatório}
+
+Embora os dados coletados tenham sido sintetizados e analisados no Relatório de Imersão, a qualidade da análise está diretamente condicionada à qualidade do instrumento de coleta. Dessa forma, as limitações identificadas no formulário impactam a profundidade e a confiabilidade dos resultados apresentados.
+
+Por fim, não foi possível verificar se o requisito mínimo de dez respondentes foi atendido, uma vez que essa informação não foi apresentada no relatório e não houve acesso aos dados originais do formulário.
+
+Como recomendação, sugere-se revisar integralmente a construção do instrumento de pesquisa, ampliando o número de perguntas, diversificando os formatos utilizados, incluindo questões de perfil dos participantes e realizando uma revisão final de conteúdo e formatação antes da aplicação. Esses ajustes contribuirão para uma coleta de dados mais robusta e alinhada aos objetivos da etapa de imersão.
+
+\subsection{Relatório de Imersão}
+
+\noindent\statuswarn{0,70\,/\,1,00 pts · Completo, mas inadequado}
+
+\begin{itemize}[leftmargin=14pt,itemsep=1pt,topsep=3pt,parsep=0pt]
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Há interpretação e conexão com o problema}}
+  \item[$\square$] {\small\textcolor{cmuted}{Resumo organizado e coerente, destacando os pontos centrais do relatório}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Introdução clara e organizada, com todos os elementos essenciais do projeto e alinhada ao contexto da disciplina}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{A seção de matriz de alinhamento está de acordo com o preenchimento da planilha}}
+  \item[$\square$] {\small\textcolor{cmuted}{A seção de matriz CSD está de acordo com o preenchimento da planilha}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Síntese da coleta de dados da pesquisa primária e secundária}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{A seção de PESQUISA DESK apresenta informações relevantes sobre a execução da pesquisa (período de coleta, participantes e contexto)}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{A seção de PESQUISA DESK documenta adequadamente os resultados da pesquisa, incluindo principais percepções e evidências coletadas}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{A seção de PESQUISA DESK inclui referências, fontes e instrumentos utilizados na coleta de dados}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{(opcional) A seção de PESQUISA DESK apresenta dados organizados e sustentados por evidências (gráficos, tabelas, estatísticas ou relatos, quando aplicável)}}
+  \item[$\square$] {\small\textcolor{cmuted}{A seção de PESQUISA PRIMÁRIA apresenta informações relevantes sobre a execução da pesquisa (período de coleta, participantes e contexto)}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{A seção de PESQUISA PRIMÁRIA documenta adequadamente os resultados da pesquisa, incluindo principais percepções e evidências coletadas}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Estrutura formal: introdução, resumo, metodologia, destaques, referências}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Linguagem formal, clara, técnica e acessível ao público-alvo}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Uso adequado de terminologia técnica, sem excesso de jargões ou linguagem coloquial}}
+  \item[$\square$] {\small\textcolor{cmuted}{Relatório bem estruturado, consistente e em conformidade com o template}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Apresentação visual organizada, profissional e de fácil leitura}}
+  \item[\textcolor{cgood}{$\checkmark$}] {\small\textcolor{cgood}{Os resultados alimentam a construção da persona}}
+\end{itemize}
+
+O \textbf{relatório de imersão} apresenta alguns avanços, mas também apresenta inconsistências importantes em relação aos critérios estabelecidos.
+
+\begin{itemize}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item \textbf{Resumo:} A seção contém quatro parágrafos, enquanto o esperado era um único parágrafo conciso (150–250 palavras), escrito em terceira pessoa e no passado, resumindo de forma objetiva o projeto, o problema investigado, o ODS relacionado, as técnicas de pesquisa aplicadas e os principais achados. Os critérios informados na descrição da atividade não foram atendidos.
+  \item \textbf{Matriz CSD:} O conteúdo da planilha era pra está dentro do relatório e não estava.
+  \item \textbf{Pesquisa Primária:} Foram apresentadas apenas informações parciais sobre o contexto, sem detalhamento do período de coleta ou número de participantes, itens essenciais para compreensão da execução da pesquisa.
+  \item \textbf{Estrutura e formatação:} O relatório apresenta títulos repetidos e inconsistências de formatação, comprometendo a clareza e a leitura. \textbf{\textit{ex: 2.3 2.3 Técnicas de Imersão e Justificativa}}
+\end{itemize}
+
+Diante desses pontos, o relatório pode ser classificado como: \textbf{“Completo, mas inadequado”}, porque todos os elementos principais estão presentes, mas boa parte do conteúdo não atende plenamente aos objetivos da atividade ou ao padrão de estrutura e formatação exigidos.
+
+\textbf{Recomendações para melhoria:}
+
+\begin{enumerate}[leftmargin=14pt,itemsep=2pt,topsep=4pt]
+  \item Consolidar o resumo em um único parágrafo conciso, seguindo os critérios de escrita, tempo verbal e objetividade.
+  \item Revisar a seção da Matriz CSD para garantir que esteja completa e coerente com a planilha de alinhamento.
+  \item Complementar a pesquisa primária com informações de período de coleta, número de participantes e métodos utilizados.
+  \item Ajustar títulos, hierarquia e formatação para conformidade com o template e facilitar a leitura.
+\end{enumerate}
+
+\section{Considerações Finais}
+
+Os ajustes indicados são de natureza metodológica e devem ser
+incorporados para as próximas entregas.
+Continuem assim.
+
+% ── Assinatura ───────────────────────────────────────────────
+
+\vspace{1.5em}
+\noindent\rule{\linewidth}{0.4pt}
+
+\begin{flushright}
+\textbf{Profa.\ Samara Silva}\\
+{\small\color{cmuted} Design Thinking --- DE\_233 · ETE Cícero Dias}\\
+{\small\color{cmuted} Recife, 1 de junho de 2026}
+\end{flushright}
+
+% ── Sem referências bibliográficas ───────────────────────────
+
+\appendix
+\onecolumn
+\section{Critérios e Níveis de Avaliação}
+
+Esta seção apresenta os critérios de avaliação para referência dos estudantes.
+
+\subsection{Níveis de Completude}
+
+\begin{tabularx}{\linewidth}{@{} p{4cm} p{1.5cm} X @{}}
+\toprule
+\textbf{Nível} & \textbf{\%} & \textbf{Descrição} \\
+\midrule
+Completo & 100\% & Fez tudo e fez certo. Critério plenamente atendido. \\
+Completo c/ ressalvas & 85\% & Fez tudo, mas algo ficou incorreto ou impreciso. Esforço total, qualidade com falha. \\
+Completo, mas inadequado & 70\% & Preencheu todos os itens, porém boa parte do conteúdo não atende ao propósito da atividade. \\
+Faltou pouco & 65\% & Fez bastante e acertou o que fez. Faltaram partes, mas o que entregou presta. \\
+Faltou pouco c/ erros & 60\% & Fez bastante, mas errou partes relevantes. Metade do caminho com qualidade irregular. \\
+Faltou muito & 40\% & Fez pouco, mas o que fez está correto. Entrega incompleta, execução ok. \\
+Faltou muito e errou & 25\% & Fez pouco e ainda errou. Esforço baixo, qualidade baixa. \\
+Errado & 10\% & Tentou, mas a abordagem foi incorreta por completo. Reconhece a tentativa. \\
+Não fez & 0\% & Critério não entregue. \\
+\bottomrule
+\end{tabularx}
+
+\vspace{1em}
+\subsection{Penalizações por Atraso}
+
+\begin{tabularx}{0.6\linewidth}{@{} X p{5cm} @{}}
+\toprule
+\textbf{Atraso} & \textbf{Desconto} \\
+\midrule
+Até 1 dia & -10\% \\
+2–3 dias & -20\% \\
+Mais de 3 dias & -30\% \\
+Não entregou & Zera a nota \\
+\bottomrule
+\end{tabularx}
+
+\section{Devolutiva Individual}
+
+A nota individual é calculada aplicando o fator de contribuição sobre a nota do grupo em cada fase.
+
+\subsection{Fatores de Contribuição}
+
+\begin{tabularx}{0.6\linewidth}{@{} X c @{}}
+\toprule
+\textbf{Fator} & \textbf{Multiplicador} \\
+\midrule
+Liderou & 100\% \\
+Participou & 100\% \\
+Participou pouco & 70\% \\
+Só fez sua parte & 40\% \\
+Não participou & 0\% \\
+\bottomrule
+\end{tabularx}
+
+\vspace{1em}
+\subsection{Notas por Integrante}
+
+\begin{tabularx}{\linewidth}{@{} X X p{2.5cm} @{}}
+\toprule
+\textbf{Integrante} & \textbf{\small DT Fase 1 — Imersão} & \textbf{Total} \\
+\midrule
+Emily Maria & 2,09 \textit{(Participou)} & \textbf{2,09} \\
+Mariana & 2,09 \textit{(Participou)} & \textbf{2,09} \\
+Nedson & 2,09 \textit{(Participou)} & \textbf{2,09} \\
+\bottomrule
+\end{tabularx}
+
+\end{document}
