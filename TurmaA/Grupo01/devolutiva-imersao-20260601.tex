@@ -65,13 +65,15 @@
 % ── CAPA ────────────────────────────────────────────────────
 \clearpage
 \thispagestyle{empty}
-\newgeometry{top=0cm,bottom=0cm,left=0cm,right=0cm}
-\IfFileExists{capa.png}{%
-  \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{capa.png}%
-}{\IfFileExists{../../capa.png}{%
-  \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{../../capa.png}%
-}{\vspace*{6cm}\begin{center}{\large\color{gray}[capa.png n\~ao encontrada]}\end{center}}
-\restoregeometry
+{
+  \newgeometry{top=0cm,bottom=0cm,left=0cm,right=0cm}
+  \IfFileExists{capa.png}{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{capa.png}}{
+    \IfFileExists{../../capa.png}{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{../../capa.png}}{
+      \vspace*{6cm}\begin{center}{\large\color{gray}[capa.png nao encontrada]}\end{center}
+    }
+  }
+  \restoregeometry
+}
 \clearpage
 \setcounter{page}{1}
 
@@ -79,7 +81,7 @@
 \title{Devolutiva de Avaliação: Fase 1 --- Imersão}
 
 \author{Profa.\ Samara Silva}
-\authornote{Grupo: \textbf{Grupo 01 - Fome Zero} \textperiodcentered\ Per\'{i}odo: 04.05-21.05 de 2026 \textperiodcentered\ Avaliado em: 1 de junho de 2026.}
+\authornote{Grupo: \textbf{Grupo 01 - Fome Zero} \textperiodcentered\ Per\'{i}odo: 04-21 de maio de 2026 \textperiodcentered\ Avaliado em: 1 de junho de 2026.}
 \email{samarasilvia.educa@gmail.com}
 \affiliation{%
   \institution{ETE C\'{i}cero Dias}
